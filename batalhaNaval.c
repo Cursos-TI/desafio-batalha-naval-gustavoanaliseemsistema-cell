@@ -1,47 +1,41 @@
 #include <stdio.h>
 
-
-// Desafio Batalha Naval - MateCheck
-// Este código inicial serve como base para o desenvolvimento do sistema de Batalha Naval.
-// Siga os comentários para implementar cada parte do desafio.
-
 int main() {
-    printf("desafio batalha naval!\n");
-    // Nível Novato - Posicionamento dos Navios
-    // Sugestão: Declare uma matriz bidimensional para representar o tabuleiro (Ex: int tabuleiro[5][5];).
-    int matriz[8][8];
-    // Sugestão: Posicione dois navios no tabuleiro, um verticalmente e outro horizontalmente.
-    matriz[0][0] = 1;
-    matriz[0][1] = 2;
-    matriz[0][2] = 3;
-    
-    // Sugestão: Utilize `printf` para exibir as coordenadas de cada parte dos navios.
+char tabuleiro[11][11];
 
-    // Nível Aventureiro - Expansão do Tabuleiro e Posicionamento Diagonal
-    // Sugestão: Expanda o tabuleiro para uma matriz 10x10.
-    // Sugestão: Posicione quatro navios no tabuleiro, incluindo dois na diagonal.
-    // Sugestão: Exiba o tabuleiro completo no console, mostrando 0 para posições vazias e 3 para posições ocupadas.
+// Preenche a primeira linha com letras (de A a I)
+for (int j = 1; j < 11; j++) {
+tabuleiro[0][j] = 'A' + (j - 1); // 'A' + 0 = 'A', 'A' + 1 = 'B', etc.
+}
 
-    // Nível Mestre - Habilidades Especiais com Matrizes
-    // Sugestão: Crie matrizes para representar habilidades especiais como cone, cruz, e octaedro.
-    // Sugestão: Utilize estruturas de repetição aninhadas para preencher as áreas afetadas por essas habilidades no tabuleiro.
-    // Sugestão: Exiba o tabuleiro com as áreas afetadas, utilizando 0 para áreas não afetadas e 1 para áreas atingidas.
+// Preenche a primeira coluna com números (de 1 a 10)
+for (int i = 1; i < 11; i++) {
+// Converte o número para char, usando o caractere '0' como base
+tabuleiro[i][0] = '0' + i;
+}
+for (int i = 1; i < 11; i++) {
+for (int j = 1; j < 11; j++) {
+tabuleiro[i][j] = '0'; 
+{printf("%", tabuleiro[3][3]= '3');} //posição vertical
+{printf("%", tabuleiro[4][3]= '3');}
+{printf("%", tabuleiro[5][3]= '3');}
+{printf("%", tabuleiro[3][5]= '3');} //posição horizontal
+{printf("%", tabuleiro[3][6]= '3');}
+{printf("%", tabuleiro[3][7]= '3');}
 
-    // Exemplos de exibição das habilidades:
-    // Exemplo para habilidade em cone:
-    // 0 0 1 0 0
-    // 0 1 1 1 0
-    // 1 1 1 1 1
-    
-    // Exemplo para habilidade em octaedro:
-    // 0 0 1 0 0
-    // 0 1 1 1 0
-    // 0 0 1 0 0
+}
+}
+for (int i = 0; i < 11; i++) {
+for (int j = 0; j < 11; j++) {
+if (i == 0 && j == 0) {
+printf("TABULEIRO BATALHA NAVAL \n");
+printf(" "); // Espaço para a célula superior esquerda
+} else {
+printf(" %c ", tabuleiro[i][j]); // Imprime o caractere e um espaço
+}
+}
+printf("\n"); // Quebra de linha ao final de cada linha
+}
 
-    // Exemplo para habilidade em cruz:
-    // 0 0 1 0 0
-    // 1 1 1 1 1
-    // 0 0 1 0 0
-
-    return 0;
+return 0;
 }
